@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* gjør ingenting
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+*/
+
+.anna {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40vh; /* vh = Viewport Height! Dette gjør at elementer endrer størrelse basert på vinduets størrelse*/
+    width: 30vh;
+    margin: 0 auto;
+    bottom: -8px;
+}
+    
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1; 
+}
+
+.mainContent {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+}
+
+#floatingContainer {
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.floatingGif {
+    display: flex;
+    justify-content: center;
+}
+
+#floatingGif1 {
+    gap: 15%;
+}
+
+#floatingGif2 {
+    position: relative;
+    gap: 55%;
+    top: 45px;
+}
+
+.gif {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+   /* border-width: 8px; /*kanskje 0?*/
+   /* border-color: white;
+    border-style: solid; */
+    object-fit: cover;
+
+    animation: glow 1s infinite alternate;
+    transition: 1.5s ease-in-out; 
+    /*position: absolute; Positionerer gif elementene absolut inni konteineren*/
+} 
+
+.gif:hover {
+    cursor: pointer;
+    height: 230px;
+    width: 230px;
+    visibility: 1;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px -10px aliceblue; /*annen farge? grå?*/
+    }
+    to {
+        box-shadow: 0 0 10px 10px aliceblue; /*annen farge? grå?*/
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+     opacity: 0;
+     }
+     to {
+     opacity: 1;
+     }
+    }
+
+
+.button {
+    background: transparent;
+    border: solid; 
+    border-radius: 12px;
+    border-color: white;
+    color:white;
+    cursor: pointer;
+    
+}
+.button:hover{
+    width:300vw;
+    height: 160vh;
+    object-fit: cover;
+    display: flex;
+    position: absolute;
+    border: none;
+    color:transparent;
+    background-image: url(images/giphyHamster.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
